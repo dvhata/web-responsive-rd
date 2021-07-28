@@ -54,19 +54,38 @@
             }
         }
         table.sort {
-
             margin-top: 15px;
             padding-left: 20px;
             background-color: white;
             width: 95%;
-            height: 70px;
+            height: 80px;
             float: left;
             border-radius: 5px;
             tr {
                 th {
+                    font-size: 15px;
+                    padding-top: 10px;
                     font-weight: bold;
-                    width:100px;
+                    width: 100px;
                     text-align: left;
+                }
+            }
+            tr {
+                margin-top: 10px;
+                td {
+                    select,input,div {
+                        margin-bottom: 10px;
+                        padding-left: 5px;
+                        width: 80%;
+                        height: 30px;
+                        border: 1px solid #dddee4;
+                        border-radius: 5px;
+                        color: #8f8c8b;
+                        display: flex;
+                        align-items: center;
+                        font-size:13px;
+                    }
+                    
                 }
             }
         }

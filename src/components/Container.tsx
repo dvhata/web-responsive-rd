@@ -48,9 +48,51 @@ const Container = () => {
             <th>Vật tư</th>
           </tr>
           <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
+            <td>
+              <select>
+                <option>Tất cả</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </td>
+            <td>
+              <select>
+                <option>Tất cả</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </td>
+            <td>
+              <input placeholder="Nhập số PO" />
+            </td>
+            <td>
+              <div>24/05/2020 to</div>
+            </td>
+            <td>
+              <input placeholder="Nhập số ĐNMS" />
+            </td>
+            <td>
+              <select>
+                <option>Tất cả</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        <table className="data">
+          <tr>
+            <th>STT</th>
+            <th>Đơn vị mua hàng</th>
+            <th>Danh mục vật tư</th>
+            <th>Ngày PO/contract</th>
+            <th>Tên NCC</th>
+            <th>Số PO/contract</th>
+            <th>Tổng giá trị Đặt hàng</th>
+            <th>Tổng giá trị Nhận hàng</th>
           </tr>
         </table>
       </div>
