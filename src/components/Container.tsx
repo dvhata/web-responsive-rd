@@ -1,5 +1,123 @@
 import React from "react";
 import "./Container.scss";
+import ShowDataList from "./ShowDataList";
+
+export interface Detail {
+  id: number;
+  don_vi: string;
+  danh_muc: string;
+  ngayPO_contract: string;
+  tenNCC: string;
+  soPO_contract: string;
+  tong_gia_tri_dat_hang: number;
+  tong_gia_tri_nhan_hang: number;
+}
+export interface Data {
+  id: number;
+  cong_ty: string;
+  tong_gia_tri_dat_hang: number;
+  tong_gia_tri_nhan_hang: number;
+  detail: Detail[];
+}
+
+const DATA_LIST: Data[] = [
+  {
+    id: 0,
+    cong_ty: "Công ty xây dựng số 1",
+    tong_gia_tri_dat_hang: 1500000000,
+    tong_gia_tri_nhan_hang: 1200000000,
+    detail: [
+      {
+        id: 1,
+        don_vi: "Công ty xây dựng số 1",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 2,
+        don_vi: "Công ty xây dựng số 1",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 3,
+        don_vi: "Công ty xây dựng số 1",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+    ],
+  },
+  {
+    id: 2,
+    cong_ty: "Công ty xây dựng số 2",
+    tong_gia_tri_dat_hang: 1500000000,
+    tong_gia_tri_nhan_hang: 1200000000,
+    detail: [
+      {
+        id: 1,
+        don_vi: "Công ty xây dựng số 2",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 2,
+        don_vi: "Công ty xây dựng số 2",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 3,
+        don_vi: "Công ty xây dựng số 2",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 4,
+        don_vi: "Công ty xây dựng số 2",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+      {
+        id: 5,
+        don_vi: "Công ty xây dựng số 2",
+        danh_muc: "Thiết bị văn phòng",
+        ngayPO_contract: "10/04/2021",
+        tenNCC: "Nhà cung cấp số 001",
+        soPO_contract: "PO/2021/002",
+        tong_gia_tri_dat_hang: 250000000,
+        tong_gia_tri_nhan_hang: 150000000,
+      },
+    ],
+  },
+];
 
 const Container = () => {
   return (
@@ -39,62 +157,53 @@ const Container = () => {
           </button>
         </div>
         <table className="sort">
-          <tr>
-            <th>Đơn vị mua hàng</th>
-            <th>Nhân viên phụ trách</th>
-            <th>Số PO</th>
-            <th>Ngày tạo PO</th>
-            <th>Số ĐNMS</th>
-            <th>Vật tư</th>
-          </tr>
-          <tr>
-            <td>
-              <select>
-                <option>Tất cả</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </td>
-            <td>
-              <select>
-                <option>Tất cả</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </td>
-            <td>
-              <input placeholder="Nhập số PO" />
-            </td>
-            <td>
-              <div>24/05/2020 to</div>
-            </td>
-            <td>
-              <input placeholder="Nhập số ĐNMS" />
-            </td>
-            <td>
-              <select>
-                <option>Tất cả</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-              </select>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Đơn vị mua hàng</th>
+              <th>Nhân viên phụ trách</th>
+              <th>Số PO</th>
+              <th>Ngày tạo PO</th>
+              <th>Số ĐNMS</th>
+              <th>Vật tư</th>
+            </tr>
+            <tr>
+              <td>
+                <select>
+                  <option>Tất cả</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </td>
+              <td>
+                <select>
+                  <option>Tất cả</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </td>
+              <td>
+                <input placeholder="Nhập số PO" />
+              </td>
+              <td>
+                <div>24/05/2020 to</div>
+              </td>
+              <td>
+                <input placeholder="Nhập số ĐNMS" />
+              </td>
+              <td>
+                <select>
+                  <option>Tất cả</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
         </table>
-        <table className="data">
-          <tr>
-            <th>STT</th>
-            <th>Đơn vị mua hàng</th>
-            <th>Danh mục vật tư</th>
-            <th>Ngày PO/contract</th>
-            <th>Tên NCC</th>
-            <th>Số PO/contract</th>
-            <th>Tổng giá trị Đặt hàng</th>
-            <th>Tổng giá trị Nhận hàng</th>
-          </tr>
-        </table>
+        <ShowDataList data={DATA_LIST} />
       </div>
     </div>
   );
