@@ -5,9 +5,23 @@
 }
 
 .App {
-    width:100%;
-    background-color: rgb(246,247,248);
-    font-family: 'Nanum Gothic', sans-serif;
-    display:flex;
+    width: 100%;
+    background-color: rgb(246, 247, 248);
+    font-family: "Nanum Gothic", sans-serif;
+    display: flex;
     flex-wrap: nowrap;
 }
+
+@media screen and (max-width: 992px) {
+    .App {
+        width: 75%;
+    }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .App {
+        width: 50%;
+    }
+}
+
