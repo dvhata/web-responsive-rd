@@ -8,39 +8,40 @@
 
     div.logo {
         margin: 30px;
-        margin-bottom: 0px;
         img.logo-img {
+            width: 85%;
+            margin-right: 8px;
         }
     }
     div.button-function {
         margin: 30px;
-        margin-top:10px;
+        margin-top: 30px;
         button.big-button {
+            padding: 10px;
             padding-left: 15px;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             color: #4585d6;
             background-color: #eeeeee;
             margin-bottom: 10px;
             width: 100%;
-            height: 50px;
-            border-radius: 10px;
+            border-radius: 5px;
             display: flex;
-            flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
             border: none;
             span {
-                font-size: 10px;
-                float: left;
+                font-size: 8px;
+                color: #aaaaaa;
             }
             img {
-                margin-right:10px;
+                margin-right: 10px;
             }
         }
         button.small-button {
-            background-color:white;
+            background-color: white;
             padding-left: 15px;
-            font-size: 15px;
+            font-size: 13px;
             font-weight: bold;
             margin-bottom: 10px;
             width: 100%;
@@ -48,9 +49,9 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            border:none;
+            border: none;
             img {
-                margin-right:10px;
+                margin-right: 10px;
             }
         }
     }

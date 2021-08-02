@@ -9,12 +9,12 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
       <table className="data">
         <tbody>
           <tr>
-            <th>STT</th>
+            <th style={{ marginLeft: "2%" }}>STT</th>
             <th>Đơn vị mua hàng</th>
             <th>Danh mục vật tư</th>
             <th>Ngày PO/contract</th>
             <th>Tên NCC</th>
-            <th>Số PO/contract</th>
+            <th style={{ marginLeft: "8%" }}>Số PO/contract</th>
             <th>Tổng giá trị Đặt hàng</th>
             <th>Tổng giá trị Nhận hàng</th>
           </tr>
@@ -25,16 +25,8 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
           <table className="show-data-list" key={item.id}>
             <tbody>
               <tr className="cong-ty" key={item.id}>
-                <td>{item.cong_ty}</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>{item.tong_gia_tri_dat_hang}</td>
+                <td style={{ paddingRight: "60%" }}>{item.cong_ty}</td>
+                <td style={{ paddingRight: "6%" }}>{item.tong_gia_tri_dat_hang}</td>
                 <td>{item.tong_gia_tri_nhan_hang}</td>
               </tr>
               {item.detail.map((d: Detail) => {
@@ -45,8 +37,10 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
                     <td>{d.danh_muc}</td>
                     <td>{d.ngayPO_contract}</td>
                     <td>{d.tenNCC}</td>
-                    <td>{d.soPO_contract}</td>
-                    <td>{d.tong_gia_tri_dat_hang}</td>
+                    <td style={{ paddingRight: "8%" }}>{d.soPO_contract}</td>
+                    <td style={{ paddingRight: "9%" }}>
+                      {d.tong_gia_tri_dat_hang}
+                    </td>
                     <td>{d.tong_gia_tri_nhan_hang}</td>
                   </tr>
                 );

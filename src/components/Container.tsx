@@ -66,7 +66,7 @@ const DATA_LIST: Data[] = [
     tong_gia_tri_nhan_hang: 1200000000,
     detail: [
       {
-        id: 1,
+        id: 6,
         don_vi: "Công ty xây dựng số 2",
         danh_muc: "Thiết bị văn phòng",
         ngayPO_contract: "10/04/2021",
@@ -76,7 +76,7 @@ const DATA_LIST: Data[] = [
         tong_gia_tri_nhan_hang: 150000000,
       },
       {
-        id: 2,
+        id: 7,
         don_vi: "Công ty xây dựng số 2",
         danh_muc: "Thiết bị văn phòng",
         ngayPO_contract: "10/04/2021",
@@ -86,7 +86,7 @@ const DATA_LIST: Data[] = [
         tong_gia_tri_nhan_hang: 150000000,
       },
       {
-        id: 3,
+        id: 8,
         don_vi: "Công ty xây dựng số 2",
         danh_muc: "Thiết bị văn phòng",
         ngayPO_contract: "10/04/2021",
@@ -96,7 +96,7 @@ const DATA_LIST: Data[] = [
         tong_gia_tri_nhan_hang: 150000000,
       },
       {
-        id: 4,
+        id: 9,
         don_vi: "Công ty xây dựng số 2",
         danh_muc: "Thiết bị văn phòng",
         ngayPO_contract: "10/04/2021",
@@ -106,7 +106,7 @@ const DATA_LIST: Data[] = [
         tong_gia_tri_nhan_hang: 150000000,
       },
       {
-        id: 5,
+        id: 10,
         don_vi: "Công ty xây dựng số 2",
         danh_muc: "Thiết bị văn phòng",
         ngayPO_contract: "10/04/2021",
@@ -127,11 +127,11 @@ const Container = () => {
         <img src="https://img.icons8.com/ios/30/000000/user-male-circle.png" />
         <div>
           <h4>Vu Tuan</h4>
-          <h6>Admin</h6>
+          <span style={{ fontSize: "10px" }}>Admin</span>
         </div>
       </div>
       <div className="content">
-        <h2>Báo cáo mua hàng tổng hợp</h2>
+        <span>Báo cáo mua hàng tổng hợp</span>
         <div className="action">
           <div className="search">
             <img
@@ -187,7 +187,7 @@ const Container = () => {
                 <input placeholder="Nhập số PO" />
               </td>
               <td>
-                <div>24/05/2020 to</div>
+                <input type="date" />
               </td>
               <td>
                 <input placeholder="Nhập số ĐNMS" />
