@@ -1,119 +1,118 @@
-import React from "react";
 import "./Container.scss";
 import ShowDataList from "./ShowDataList";
 
 export interface Detail {
   id: number;
-  don_vi: string;
-  danh_muc: string;
-  ngayPO_contract: string;
-  tenNCC: string;
-  soPO_contract: string;
-  tong_gia_tri_dat_hang: number;
-  tong_gia_tri_nhan_hang: number;
+  office: string;
+  category: string;
+  POdateContract: string;
+  provider: string;
+  POnumberContract: string;
+  orderTotal: number;
+  receiveTotal: number;
 }
 export interface Data {
   id: number;
-  cong_ty: string;
-  tong_gia_tri_dat_hang: number;
-  tong_gia_tri_nhan_hang: number;
+  company: string;
+  orderTotal: number;
+  receiveTotal: number;
   detail: Detail[];
 }
 
 const DATA_LIST: Data[] = [
   {
     id: 0,
-    cong_ty: "Công ty xây dựng số 1",
-    tong_gia_tri_dat_hang: 1500000000,
-    tong_gia_tri_nhan_hang: 1200000000,
+    company: "Công ty xây dựng số 1",
+    orderTotal: 1500000000,
+    receiveTotal: 1200000000,
     detail: [
       {
         id: 1,
-        don_vi: "Công ty xây dựng số 1",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 1",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 2,
-        don_vi: "Công ty xây dựng số 1",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 1",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 3,
-        don_vi: "Công ty xây dựng số 1",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 1",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
     ],
   },
   {
     id: 2,
-    cong_ty: "Công ty xây dựng số 2",
-    tong_gia_tri_dat_hang: 1500000000,
-    tong_gia_tri_nhan_hang: 1200000000,
+    company: "Công ty xây dựng số 2",
+    orderTotal: 1500000000,
+    receiveTotal: 1200000000,
     detail: [
       {
         id: 6,
-        don_vi: "Công ty xây dựng số 2",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 2",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 7,
-        don_vi: "Công ty xây dựng số 2",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 2",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 8,
-        don_vi: "Công ty xây dựng số 2",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 2",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 9,
-        don_vi: "Công ty xây dựng số 2",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 2",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
       {
         id: 10,
-        don_vi: "Công ty xây dựng số 2",
-        danh_muc: "Thiết bị văn phòng",
-        ngayPO_contract: "10/04/2021",
-        tenNCC: "Nhà cung cấp số 001",
-        soPO_contract: "PO/2021/002",
-        tong_gia_tri_dat_hang: 250000000,
-        tong_gia_tri_nhan_hang: 150000000,
+        office: "Công ty xây dựng số 2",
+        category: "Thiết bị văn phòng",
+        POdateContract: "10/04/2021",
+        provider: "Nhà cung cấp số 001",
+        POnumberContract: "PO/2021/002",
+        orderTotal: 250000000,
+        receiveTotal: 150000000,
       },
     ],
   },

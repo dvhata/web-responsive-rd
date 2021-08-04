@@ -25,23 +25,23 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
           <table className="show-data-list" key={item.id}>
             <tbody>
               <tr className="cong-ty" key={item.id}>
-                <td style={{ paddingRight: "60%" }}>{item.cong_ty}</td>
-                <td style={{ paddingRight: "6%" }}>{item.tong_gia_tri_dat_hang}</td>
-                <td>{item.tong_gia_tri_nhan_hang}</td>
+                <td style={{ paddingRight: "60%" }}>{item.company}</td>
+                <td style={{ paddingRight: "6%" }}>{item.orderTotal}</td>
+                <td>{item.receiveTotal}</td>
               </tr>
               {item.detail.map((d: Detail) => {
                 return (
                   <tr className="cong-ty-detail" key={d.id}>
                     <td>{d.id}</td>
-                    <td>{d.don_vi}</td>
-                    <td>{d.danh_muc}</td>
-                    <td>{d.ngayPO_contract}</td>
-                    <td>{d.tenNCC}</td>
-                    <td style={{ paddingRight: "8%" }}>{d.soPO_contract}</td>
+                    <td>{d.office}</td>
+                    <td>{d.category}</td>
+                    <td>{d.POdateContract}</td>
+                    <td>{d.provider}</td>
+                    <td style={{ paddingRight: "8%" }}>{d.POnumberContract}</td>
                     <td style={{ paddingRight: "9%" }}>
-                      {d.tong_gia_tri_dat_hang}
+                      {d.orderTotal}
                     </td>
-                    <td>{d.tong_gia_tri_nhan_hang}</td>
+                    <td>{d.receiveTotal}</td>
                   </tr>
                 );
               })}
