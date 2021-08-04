@@ -1,19 +1,20 @@
 .header-block {
+    width: 17%;
+    position: fixed;
     margin: 20px;
     margin-top: 1px;
     margin-right: 1px;
-    width: 20%;
     height: 1080px;
     background-color: white;
 
-    div.logo {
+    .logo {
         margin: 30px;
         img.logo-img {
             width: 85%;
             margin-right: 8px;
         }
     }
-    div.button-function {
+    .button-function {
         margin: 30px;
         margin-top: 30px;
         button.big-button {
@@ -38,7 +39,7 @@
                 margin-right: 10px;
             }
         }
-        button.small-button {
+        .small-button {
             background-color: white;
             padding-left: 15px;
             font-size: 13px;
