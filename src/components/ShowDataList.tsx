@@ -25,9 +25,11 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
           <table className="show-data-list" key={item.id}>
             <tbody>
               <tr className="cong-ty" key={item.id}>
-                <td style={{ paddingRight: "60%" }}>{item.company}</td>
-                <td style={{ paddingRight: "6%" }}>{item.orderTotal}</td>
-                <td>{item.receiveTotal}</td>
+                <th colSpan={1} style={{ paddingRight: "60%" }}>{item.company}</th>
+                <th colSpan={6} style={{ paddingRight: "7%" }}>
+                  {item.orderTotal}
+                </th>
+                <th>{item.receiveTotal}</th>
               </tr>
               {item.detail.map((d: Detail) => {
                 return (
@@ -38,9 +40,7 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
                     <td>{d.POdateContract}</td>
                     <td>{d.provider}</td>
                     <td style={{ paddingRight: "8%" }}>{d.POnumberContract}</td>
-                    <td style={{ paddingRight: "9%" }}>
-                      {d.orderTotal}
-                    </td>
+                    <td style={{ paddingRight: "9%" }}>{d.orderTotal}</td>
                     <td>{d.receiveTotal}</td>
                   </tr>
                 );
