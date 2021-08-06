@@ -7,9 +7,9 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
   return (
     <div className="show-data">
       <table className="data">
-        <tbody>
+        <thead>
           <tr>
-            <th style={{ marginLeft: "2%" }}>STT</th>
+            <th style={{paddingLeft: "20px"}}>STT</th>
             <th>Đơn vị mua hàng</th>
             <th>Danh mục vật tư</th>
             <th>Ngày PO/contract</th>
@@ -18,37 +18,41 @@ const ShowDataList = (props: PropsWithChildren<ShowDataListProps>) => {
             <th>Tổng giá trị Đặt hàng</th>
             <th>Tổng giá trị Nhận hàng</th>
           </tr>
+        </thead>
+        <tbody>
+          {data.map((item: Data) => {
+            return (
+              <>
+                <tr className="cong-ty" key={item.id}>
+                  <td colSpan={1} style={{ paddingRight: "60.5%" }}>
+                    {item.company}
+                  </td>
+                  <td colSpan={6} style={{ paddingRight: "7%" }}>
+                    {item.orderTotal}
+                  </td>
+                  <td>{item.receiveTotal}</td>
+                </tr>
+                {item.detail.map((d: Detail) => {
+                  return (
+                    <tr className="cong-ty-detail" key={d.id}>
+                      <td>{d.id}</td>
+                      <td>{d.office}</td>
+                      <td>{d.category}</td>
+                      <td>{d.POdateContract}</td>
+                      <td>{d.provider}</td>
+                      <td style={{ paddingRight: "8%" }}>
+                        {d.POnumberContract}
+                      </td>
+                      <td style={{ paddingRight: "9%" }}>{d.orderTotal}</td>
+                      <td>{d.receiveTotal}</td>
+                    </tr>
+                  );
+                })}
+              </>
+            );
+          })}
         </tbody>
       </table>
-      {data.map((item: Data) => {
-        return (
-          <table className="show-data-list" key={item.id}>
-            <tbody>
-              <tr className="cong-ty" key={item.id}>
-                <th colSpan={1} style={{ paddingRight: "60%" }}>{item.company}</th>
-                <th colSpan={6} style={{ paddingRight: "7%" }}>
-                  {item.orderTotal}
-                </th>
-                <th>{item.receiveTotal}</th>
-              </tr>
-              {item.detail.map((d: Detail) => {
-                return (
-                  <tr className="cong-ty-detail" key={d.id}>
-                    <td>{d.id}</td>
-                    <td>{d.office}</td>
-                    <td>{d.category}</td>
-                    <td>{d.POdateContract}</td>
-                    <td>{d.provider}</td>
-                    <td style={{ paddingRight: "8%" }}>{d.POnumberContract}</td>
-                    <td style={{ paddingRight: "9%" }}>{d.orderTotal}</td>
-                    <td>{d.receiveTotal}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        );
-      })}
     </div>
   );
 };
